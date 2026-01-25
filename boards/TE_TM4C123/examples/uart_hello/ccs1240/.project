@@ -24,4 +24,26 @@
 		<nature>org.eclipse.cdt.core.ccnature</nature>
 		<nature>org.eclipse.cdt.managedbuilder.core.ScannerConfigNature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>TIVA_LIBRARY_LOC</name>
+			<type>2</type>
+			<locationURI>TIVA_LIBRARY_LOC</locationURI>
+		</link>
+		<link>
+			<name>uart_hello.c</name>
+			<type>1</type>
+			<locationURI>EXAMPLES_FILES_LOC/uart_hello/uart_hello.c</locationURI>
+		</link>
+	</linkedResources>
+	<variableList>
+		<variable>
+			<name>EXAMPLES_FILES_LOC</name>
+			<value>$%7BPARENT-3-PROJECT_LOC%7D/examples</value>
+		</variable>
+		<variable>
+			<name>TIVA_LIBRARY_LOC</name>
+			<value>$%7BPARENT-3-PROJECT_LOC%7D/libs/Tiva_C_Libs</value>
+		</variable>
+	</variableList>
 </projectDescription>

@@ -1,4 +1,8 @@
 eclipse.preferences.version=1
+encoding//Debug/TIVA_LIBRARY_LOC/driverlib/subdir_rules.mk=UTF-8
+encoding//Debug/TIVA_LIBRARY_LOC/driverlib/subdir_vars.mk=UTF-8
+encoding//Debug/Tiva_C_Libs/driverlib/subdir_rules.mk=UTF-8
+encoding//Debug/Tiva_C_Libs/driverlib/subdir_vars.mk=UTF-8
 encoding//Debug/driverlib/subdir_rules.mk=UTF-8
 encoding//Debug/driverlib/subdir_vars.mk=UTF-8
 encoding//Debug/makefile=UTF-8
