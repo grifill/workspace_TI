@@ -44,6 +44,8 @@ __error__(char *pcFilename, uint32_t ui32Line)
 
 int main(void) {
 
+    volatile uint32_t i = 0;
+
     // Set the clocking to run directly from the crystal
     MAP_SysCtlClockSet(SYSCTL_SYSDIV_1 |
                        SYSCTL_USE_OSC |
@@ -51,8 +53,27 @@ int main(void) {
                        SYSCTL_XTAL_16MHZ);
 
     // Enable the peripherals used by this example
+    // Enable the GPIO port that is used for the on-board LED
+    SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOG);
+
+    // Check if the peripheral access is enabled
+    while (!SysCtlPeripheralReady(SYSCTL_PERIPH_GPIOG)) {
+
+    }
+
+    // Enable the GPIO pin for the LED (PG3),
+    // set the direction as output, and enable the GPIO pin for digital function
+    GPIOPinTypeGPIOOutput(GPIO_PORTG_BASE, GPIO_PIN_3);
 
     while(1) {
+
+        GPIOPinWrite(GPIO_PORTG_BASE, GPIO_PIN_3, GPIO_PIN_3);
+        for(i = 0; i < 100000; i++) {
+        }
+        GPIOPinWrite(GPIO_PORTG_BASE, GPIO_PIN_3, 0);
+        for(i = 0; i < 100000; i++) {
+        }
+
     }
 
     //return 0;
