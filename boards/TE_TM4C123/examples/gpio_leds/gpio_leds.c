@@ -65,6 +65,8 @@ int main(void) {
     // set the direction as output, and enable the GPIO pin for digital function
     GPIOPinTypeGPIOOutput(GPIO_PORTG_BASE, GPIO_PIN_3);
     GPIOPinTypeGPIOOutput(GPIO_PORTG_BASE, GPIO_PIN_2);
+    GPIOPinTypeGPIOOutput(GPIO_PORTG_BASE, GPIO_PIN_6);
+    GPIOPinTypeGPIOOutput(GPIO_PORTG_BASE, GPIO_PIN_7);
 
     while(1) {
 
