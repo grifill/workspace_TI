@@ -70,10 +70,16 @@ int main(void) {
 
     while(1) {
 
+        GPIOPinWrite(GPIO_PORTG_BASE, GPIO_PIN_3, GPIO_PIN_2);
         GPIOPinWrite(GPIO_PORTG_BASE, GPIO_PIN_3, GPIO_PIN_3);
+        GPIOPinWrite(GPIO_PORTG_BASE, GPIO_PIN_3, GPIO_PIN_6);
+        GPIOPinWrite(GPIO_PORTG_BASE, GPIO_PIN_3, GPIO_PIN_7);
         for(i = 0; i < 100000; i++) {
         }
+        GPIOPinWrite(GPIO_PORTG_BASE, GPIO_PIN_2, 0);
         GPIOPinWrite(GPIO_PORTG_BASE, GPIO_PIN_3, 0);
+        GPIOPinWrite(GPIO_PORTG_BASE, GPIO_PIN_6, 0);
+        GPIOPinWrite(GPIO_PORTG_BASE, GPIO_PIN_7, 0);
         for(i = 0; i < 100000; i++) {
         }
 
