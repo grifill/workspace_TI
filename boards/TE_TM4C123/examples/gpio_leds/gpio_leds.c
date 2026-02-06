@@ -42,6 +42,8 @@ __error__(char *pcFilename, uint32_t ui32Line)
 #endif
 
 
+#define DELAY_CYCLE  (100000)
+
 int main(void) {
 
     volatile uint32_t i = 0;
@@ -63,25 +65,40 @@ int main(void) {
 
     // Enable the GPIO pin for the LED (PG3),
     // set the direction as output, and enable the GPIO pin for digital function
-    GPIOPinTypeGPIOOutput(GPIO_PORTG_BASE, GPIO_PIN_3);
     GPIOPinTypeGPIOOutput(GPIO_PORTG_BASE, GPIO_PIN_2);
+    GPIOPinTypeGPIOOutput(GPIO_PORTG_BASE, GPIO_PIN_3);
     GPIOPinTypeGPIOOutput(GPIO_PORTG_BASE, GPIO_PIN_6);
     GPIOPinTypeGPIOOutput(GPIO_PORTG_BASE, GPIO_PIN_7);
 
     while(1) {
 
-        GPIOPinWrite(GPIO_PORTG_BASE, GPIO_PIN_3, GPIO_PIN_2);
+        // Led1 On, other Off
         GPIOPinWrite(GPIO_PORTG_BASE, GPIO_PIN_3, GPIO_PIN_3);
-        GPIOPinWrite(GPIO_PORTG_BASE, GPIO_PIN_3, GPIO_PIN_6);
-        GPIOPinWrite(GPIO_PORTG_BASE, GPIO_PIN_3, GPIO_PIN_7);
-        for(i = 0; i < 100000; i++) {
-        }
+        GPIOPinWrite(GPIO_PORTG_BASE, GPIO_PIN_2, 0);
+        GPIOPinWrite(GPIO_PORTG_BASE, GPIO_PIN_6, 0);
+        GPIOPinWrite(GPIO_PORTG_BASE, GPIO_PIN_7, 0);
+        for(i = 0; i < DELAY_CYCLE; i++) {}
+
+        // Led2 On, other Off
+        GPIOPinWrite(GPIO_PORTG_BASE, GPIO_PIN_3, 0);
+        GPIOPinWrite(GPIO_PORTG_BASE, GPIO_PIN_2, GPIO_PIN_2);
+        GPIOPinWrite(GPIO_PORTG_BASE, GPIO_PIN_6, 0);
+        GPIOPinWrite(GPIO_PORTG_BASE, GPIO_PIN_7, 0);
+        for(i = 0; i < DELAY_CYCLE; i++) {}
+
+        // Led3 On, other Off
+        GPIOPinWrite(GPIO_PORTG_BASE, GPIO_PIN_2, 0);
+        GPIOPinWrite(GPIO_PORTG_BASE, GPIO_PIN_3, 0);
+        GPIOPinWrite(GPIO_PORTG_BASE, GPIO_PIN_6, GPIO_PIN_6);
+        GPIOPinWrite(GPIO_PORTG_BASE, GPIO_PIN_7, 0);
+        for(i = 0; i < DELAY_CYCLE; i++) {}
+
+        // Led3 On, other Off
         GPIOPinWrite(GPIO_PORTG_BASE, GPIO_PIN_2, 0);
         GPIOPinWrite(GPIO_PORTG_BASE, GPIO_PIN_3, 0);
         GPIOPinWrite(GPIO_PORTG_BASE, GPIO_PIN_6, 0);
-        GPIOPinWrite(GPIO_PORTG_BASE, GPIO_PIN_7, 0);
-        for(i = 0; i < 100000; i++) {
-        }
+        GPIOPinWrite(GPIO_PORTG_BASE, GPIO_PIN_7, GPIO_PIN_7);
+        for(i = 0; i < DELAY_CYCLE; i++) {}
 
     }
 
