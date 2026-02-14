@@ -31,6 +31,7 @@
 #include "driverlib/rom_map.h"
 #include "driverlib/sysctl.h"
 #include "driverlib/timer.h"
+#include "driverlib/systick.h"
 
 //*****************************************************************************
 // The error routine that is called if the driver library encounters an error.
@@ -43,6 +44,8 @@ __error__(char *pcFilename, uint32_t ui32Line)
 #endif
 
 
+void SysTick_Handler(void);
+
 int main(void) {
 
     // Set the clocking to run directly from the crystal
@@ -51,10 +54,56 @@ int main(void) {
                        SYSCTL_OSC_MAIN |
                        SYSCTL_XTAL_16MHZ);
 
+
     // Enable the peripherals used by this example
+    // Enable the GPIO port that is used for the on-board LED
+    SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOG);
+
+    // Check if the peripheral access is enabled
+    while (!SysCtlPeripheralReady(SYSCTL_PERIPH_GPIOG)) {
+    }
+
+    SysTickEnable();
+    SysTickPeriodSet(80000);
+
+
+    // Enable the GPIO pin for the LED (PG3),
+    // set the direction as output, and enable the GPIO pin for digital function
+    GPIOPinTypeGPIOOutput(GPIO_PORTG_BASE, GPIO_PIN_3);
 
     while(1) {
+        if(SysTickValueGet() > 0x80000) {
+            GPIOPinWrite(GPIO_PORTG_BASE, GPIO_PIN_3, GPIO_PIN_3);
+            SysTickPeriodSet(0);
+        }
     }
 
     //return 0;
 }
+
+/*
+void SysTick_Handler(void);
+
+int main()
+{
+    SYSCTL->RCGCGPIO |= (1U << 5);  // enable clock for GPIOF
+    GPIOF->DEN |= LED_RED; // enable digital function on pin 1
+    GPIOF->DIR |= LED_RED; // set pin 1 as output
+
+    SysTick->LOAD = 16000000 - 1; // set reload value for 1 second delay
+    SysTick->VAL = 0; // clear the current value and the COUNT flag
+    SysTick->CTRL = (1U << 2) | (1U << 1) | 1U; // enable systick timer with system clock and interrupt
+
+    __enable_irq(); // enable global interrupts
+
+    while(1)
+    {
+        // do nothing
+    }
+}
+
+void SysTick_Handler(void)
+{
+    GPIOF->DATA ^= LED_RED; // toggle LED pin
+}
+*/
