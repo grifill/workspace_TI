@@ -13,6 +13,6 @@
 	<rts value="libc.a"/>
 	<createSlaveProjects value=""/>
 	<templateProperties value="id=com.ti.ccstudio.project.templates.helloWorld"/>
-	<filesToOpen value="hello.c"/>
+	<filesToOpen value="main_combine.c"/>
 	<isTargetManual value="false"/>
 </projectOptions>

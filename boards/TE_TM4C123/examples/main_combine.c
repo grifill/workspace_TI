@@ -1,0 +1,42 @@
+/**
+ * ---------------------------------------------------------------------------
+ * Copyright (c) 2026 Gregory Filatov
+ * All rights reserved.
+ *
+ * \file   main_combine.c
+ * \author Gregory Filatov
+ * \date   18 February 2026
+ * \version 0.1.0
+ *
+ * \brief  Contains main (combine) function (examples TM4C123GH6PZ chip)
+ *
+ * Module: Combine function
+ *
+ * Purpose: Example, education
+ *
+ * Functionality:
+ *     Environment
+ * ---------------------------------------------------------------------------
+ */
+#include <stdint.h>
+#include <stdio.h>
+#include <stdbool.h>
+
+//*****************************************************************************
+// The error routine that is called if the driver library encounters an error.
+//*****************************************************************************
+#ifdef DEBUG
+void
+__error__(char *pcFilename, uint32_t ui32Line)
+{
+}
+#endif
+
+
+int main(void) {
+
+    while(1) {
+    }
+
+    //return 0;
+}

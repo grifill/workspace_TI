@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>gpio_leds</name>
+	<name>main_combine</name>
 	<comment></comment>
 	<projects>
 	</projects>
@@ -26,24 +26,27 @@
 	</natures>
 	<linkedResources>
 		<link>
-			<name>TIVA_LIBRARY_LOC</name>
-			<type>2</type>
-			<locationURI>TIVA_LIBRARY_LOC</locationURI>
-		</link>
-		<link>
-			<name>gpio_leds.c</name>
+			<name>main_combine.c</name>
 			<type>1</type>
-			<locationURI>EXAMPLES_FILES_LOC/gpio_leds/gpio_leds.c</locationURI>
+			<locationURI>SRC_MAIN_LOC/main_combine.c</locationURI>
 		</link>
 	</linkedResources>
 	<variableList>
 		<variable>
-			<name>EXAMPLES_FILES_LOC</name>
-			<value>$%7BPARENT-3-PROJECT_LOC%7D/examples</value>
+			<name>LIBRARY_TIVA_LOC</name>
+			<value>$%7BPARENT-2-PROJECT_LOC%7D/libs/TivaC_Libs</value>
 		</variable>
 		<variable>
-			<name>TIVA_LIBRARY_LOC</name>
-			<value>$%7BPARENT-3-PROJECT_LOC%7D/libs/Tiva_C_Libs</value>
+			<name>LIBRARY_USER_LOC</name>
+			<value>$%7BPARENT-2-PROJECT_LOC%7D/libs/User_Libs</value>
+		</variable>
+		<variable>
+			<name>SRC_EXAMPLES_FILES_LOC</name>
+			<value>$%7BPARENT-2-PROJECT_LOC%7D/examples/src</value>
+		</variable>
+		<variable>
+			<name>SRC_MAIN_LOC</name>
+			<value>$%7BPARENT-2-PROJECT_LOC%7D/examples</value>
 		</variable>
 	</variableList>
 </projectDescription>
