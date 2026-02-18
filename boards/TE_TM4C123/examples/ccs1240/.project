@@ -26,9 +26,24 @@
 	</natures>
 	<linkedResources>
 		<link>
+			<name>LIBRARY_TIVA_LOC</name>
+			<type>2</type>
+			<locationURI>LIBRARY_TIVA_LOC</locationURI>
+		</link>
+		<link>
+			<name>LIBRARY_USER_LOC</name>
+			<type>2</type>
+			<locationURI>LIBRARY_USER_LOC</locationURI>
+		</link>
+		<link>
 			<name>main_combine.c</name>
 			<type>1</type>
 			<locationURI>SRC_MAIN_LOC/main_combine.c</locationURI>
+		</link>
+		<link>
+			<name>uart_hello</name>
+			<type>2</type>
+			<locationURI>SRC_EXAMPLES_LOC/uart_hello</locationURI>
 		</link>
 	</linkedResources>
 	<variableList>
@@ -41,7 +56,7 @@
 			<value>$%7BPARENT-2-PROJECT_LOC%7D/libs/User_Libs</value>
 		</variable>
 		<variable>
-			<name>SRC_EXAMPLES_FILES_LOC</name>
+			<name>SRC_EXAMPLES_LOC</name>
 			<value>$%7BPARENT-2-PROJECT_LOC%7D/examples/src</value>
 		</variable>
 		<variable>

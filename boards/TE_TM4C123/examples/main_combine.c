@@ -32,8 +32,11 @@ __error__(char *pcFilename, uint32_t ui32Line)
 }
 #endif
 
+extern int uart_hello(void);
 
 int main(void) {
+
+    uart_hello();
 
     while(1) {
     }

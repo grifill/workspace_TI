@@ -4,6 +4,7 @@
     <stringAttribute key="com.ti.ccstudio.debug.debugModel.ATTR_PROGRAM.Tiva TM4C123GH6PZ.ccxml.Stellaris In-Circuit Debug Interface/CORTEX_M4_0" value="${build_artifact:main_combine}"/>
     <stringAttribute key="com.ti.ccstudio.debug.debugModel.ATTR_PROJECT.Tiva TM4C123GH6PZ.ccxml.Stellaris In-Circuit Debug Interface/CORTEX_M4_0" value="main_combine"/>
     <stringAttribute key="com.ti.ccstudio.debug.debugModel.ATTR_TARGET_CONFIG" value="${target_config_active_default:main_combine}"/>
+    <stringAttribute key="com.ti.ccstudio.debug.debugModel.MRU_PROGRAM.Tiva TM4C123GH6PZ.ccxml.Stellaris In-Circuit Debug Interface/CORTEX_M4_0" value="${build_artifact:main_combine}"/>
     <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
         <listEntry value="/main_combine"/>
     </listAttribute>

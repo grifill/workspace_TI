@@ -5,7 +5,7 @@
  *
  * \file   uart_hello.c
  * \author Gregory Filatov
- * \date   24 January 2026
+ * \date   18 February 2026
  * \version 0.1.0
  *
  * \brief  Contains UART-Hello Example for TM4C123GH6PZ chip
@@ -32,23 +32,13 @@
 #include "driverlib/sysctl.h"
 #include "driverlib/uart.h"
 
-//*****************************************************************************
-// The error routine that is called if the driver library encounters an error.
-//*****************************************************************************
-#ifdef DEBUG
-void
-__error__(char *pcFilename, uint32_t ui32Line)
-{
-}
-#endif
-
-void UARTSend(const uint8_t *pui8Buffer, uint32_t ui32Count) {
+static void UARTSend(const uint8_t *pui8Buffer, uint32_t ui32Count) {
     while(ui32Count--) {
         MAP_UARTCharPut(UART0_BASE, *pui8Buffer++);
     }
 }
 
-int main(void) {
+int uart_hello(void) {
 
     // Set the clocking to run directly from the crystal
     MAP_SysCtlClockSet(SYSCTL_SYSDIV_1 |

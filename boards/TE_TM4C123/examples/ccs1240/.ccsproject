@@ -12,7 +12,7 @@
 	<linkerCommandFile value="tm4c123gh6pz.cmd"/>
 	<rts value="libc.a"/>
 	<createSlaveProjects value=""/>
-	<templateProperties value="id=com.ti.ccstudio.project.templates.helloWorld"/>
-	<filesToOpen value="main_combine.c"/>
+	<templateProperties value="id=com.ti.common.project.core.emptyProjectWithMainTemplate"/>
+	<filesToOpen value="main.c"/>
 	<isTargetManual value="false"/>
 </projectOptions>
