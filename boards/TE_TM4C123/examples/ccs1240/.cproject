@@ -56,6 +56,9 @@
 									<listOptionValue builtIn="false" value="${LIBRARY_USER_LOC}"/>
 									<listOptionValue builtIn="false" value="${SRC_EXAMPLES_LOC}"/>
 									<listOptionValue builtIn="false" value="${SRC_MAIN_LOC}"/>
+									<listOptionValue builtIn="false" value="${SRC_EXAMPLES_LOC}/gpio_leds"/>
+									<listOptionValue builtIn="false" value="${SRC_EXAMPLES_LOC}/timer_leds"/>
+									<listOptionValue builtIn="false" value="${SRC_EXAMPLES_LOC}/uart_hello"/>
 								</option>
 								<option id="com.ti.ccstudio.buildDefinitions.TMS470_20.2.compilerID.LITTLE_ENDIAN.625316364" name="Little endian code [See 'General' page to edit] (--little_endian, -me)" superClass="com.ti.ccstudio.buildDefinitions.TMS470_20.2.compilerID.LITTLE_ENDIAN" useByScannerDiscovery="false" value="true" valueType="boolean"/>
 								<inputType id="com.ti.ccstudio.buildDefinitions.TMS470_20.2.compiler.inputType__C_SRCS.1346133096" name="C Sources" superClass="com.ti.ccstudio.buildDefinitions.TMS470_20.2.compiler.inputType__C_SRCS"/>

@@ -5,7 +5,7 @@
  *
  * \file   main_combine.c
  * \author Gregory Filatov
- * \date   18 February 2026
+ * \date   19 February 2026
  * \version 0.1.0
  *
  * \brief  Contains main (combine) function (examples TM4C123GH6PZ chip)
@@ -22,6 +22,19 @@
 #include <stdio.h>
 #include <stdbool.h>
 
+// Examples - List
+#include "gpio_leds.h"
+
+int main(void) {
+
+    example_gpio_leds();
+
+    while(1) {
+    }
+
+    //return 0;
+}
+
 //*****************************************************************************
 // The error routine that is called if the driver library encounters an error.
 //*****************************************************************************
@@ -31,17 +44,3 @@ __error__(char *pcFilename, uint32_t ui32Line)
 {
 }
 #endif
-
-extern int uart_hello(void);
-extern int gpio_leds(void);
-extern int timer_leds(void);
-
-int main(void) {
-
-    uart_hello();
-
-    while(1) {
-    }
-
-    //return 0;
-}

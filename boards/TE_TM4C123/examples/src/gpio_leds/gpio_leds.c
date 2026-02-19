@@ -5,7 +5,7 @@
  *
  * \file   gpio_leds.c
  * \author Gregory Filatov
- * \date   26 January 2026
+ * \date   19 February 2026
  * \version 0.1.0
  *
  * \brief  Contains GPIO-LEDS Example for TM4C123GH6PZ chip
@@ -18,22 +18,10 @@
  *     Environment
  * ---------------------------------------------------------------------------
  */
-#include <stdint.h>
-#include <stdio.h>
-#include <stdbool.h>
 
-#include "inc/hw_ints.h"
-#include "inc/hw_memmap.h"
-#include "driverlib/debug.h"
-#include "driverlib/gpio.h"
-#include "driverlib/pin_map.h"
-#include "driverlib/rom.h"
-#include "driverlib/rom_map.h"
-#include "driverlib/sysctl.h"
+#include "gpio_leds.h"
 
-#define DELAY_CYCLE  (100000)
-
-int gpio_leds(void) {
+int example_gpio_leds(void) {
 
     volatile uint32_t i = 0;
 
