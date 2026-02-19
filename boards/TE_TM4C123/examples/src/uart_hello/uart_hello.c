@@ -5,7 +5,7 @@
  *
  * \file   uart_hello.c
  * \author Gregory Filatov
- * \date   18 February 2026
+ * \date   19 February 2026
  * \version 0.1.0
  *
  * \brief  Contains UART-Hello Example for TM4C123GH6PZ chip
@@ -18,19 +18,8 @@
  *     Environment
  * ---------------------------------------------------------------------------
  */
-#include <stdint.h>
-#include <stdio.h>
-#include <stdbool.h>
 
-#include "inc/hw_ints.h"
-#include "inc/hw_memmap.h"
-#include "driverlib/debug.h"
-#include "driverlib/gpio.h"
-#include "driverlib/pin_map.h"
-#include "driverlib/rom.h"
-#include "driverlib/rom_map.h"
-#include "driverlib/sysctl.h"
-#include "driverlib/uart.h"
+#include "uart_hello.h"
 
 static void UARTSend(const uint8_t *pui8Buffer, uint32_t ui32Count) {
     while(ui32Count--) {
@@ -38,7 +27,7 @@ static void UARTSend(const uint8_t *pui8Buffer, uint32_t ui32Count) {
     }
 }
 
-int uart_hello(void) {
+int example_uart_hello(void) {
 
     // Set the clocking to run directly from the crystal
     MAP_SysCtlClockSet(SYSCTL_SYSDIV_1 |
