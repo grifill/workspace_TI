@@ -31,20 +31,9 @@
 #include "driverlib/rom_map.h"
 #include "driverlib/sysctl.h"
 
-//*****************************************************************************
-// The error routine that is called if the driver library encounters an error.
-//*****************************************************************************
-#ifdef DEBUG
-void
-__error__(char *pcFilename, uint32_t ui32Line)
-{
-}
-#endif
-
-
 #define DELAY_CYCLE  (100000)
 
-int main(void) {
+int gpio_leds(void) {
 
     volatile uint32_t i = 0;
 

@@ -36,9 +36,19 @@
 			<locationURI>LIBRARY_USER_LOC</locationURI>
 		</link>
 		<link>
+			<name>gpio_leds</name>
+			<type>2</type>
+			<locationURI>SRC_EXAMPLES_LOC/gpio_leds</locationURI>
+		</link>
+		<link>
 			<name>main_combine.c</name>
 			<type>1</type>
 			<locationURI>SRC_MAIN_LOC/main_combine.c</locationURI>
+		</link>
+		<link>
+			<name>timer_leds</name>
+			<type>2</type>
+			<locationURI>SRC_EXAMPLES_LOC/timer_leds</locationURI>
 		</link>
 		<link>
 			<name>uart_hello</name>

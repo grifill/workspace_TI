@@ -33,6 +33,8 @@ __error__(char *pcFilename, uint32_t ui32Line)
 #endif
 
 extern int uart_hello(void);
+extern int gpio_leds(void);
+extern int timer_leds(void);
 
 int main(void) {
 

@@ -33,20 +33,10 @@
 #include "driverlib/timer.h"
 #include "driverlib/systick.h"
 
-//*****************************************************************************
-// The error routine that is called if the driver library encounters an error.
-//*****************************************************************************
-#ifdef DEBUG
-void
-__error__(char *pcFilename, uint32_t ui32Line)
-{
-}
-#endif
-
 
 void SysTick_Handler(void);
 
-int main(void) {
+int timer_leds(void) {
 
     // Set the clocking to run directly from the crystal
     MAP_SysCtlClockSet(SYSCTL_SYSDIV_1 |
