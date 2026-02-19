@@ -5,7 +5,7 @@
  *
  * \file   timer_leds.c
  * \author Gregory Filatov
- * \date   28 January 2026
+ * \date   19 February 2026
  * \version 0.1.0
  *
  * \brief  Contains Timer Example for TM4C123GH6PZ chip
@@ -18,25 +18,12 @@
  *     Environment
  * ---------------------------------------------------------------------------
  */
-#include <stdint.h>
-#include <stdio.h>
-#include <stdbool.h>
-
-#include "inc/hw_ints.h"
-#include "inc/hw_memmap.h"
-#include "driverlib/debug.h"
-#include "driverlib/gpio.h"
-#include "driverlib/pin_map.h"
-#include "driverlib/rom.h"
-#include "driverlib/rom_map.h"
-#include "driverlib/sysctl.h"
-#include "driverlib/timer.h"
-#include "driverlib/systick.h"
+#include "timer_leds.h"
 
 
 void SysTick_Handler(void);
 
-int timer_leds(void) {
+int example_timer_leds(void) {
 
     // Set the clocking to run directly from the crystal
     MAP_SysCtlClockSet(SYSCTL_SYSDIV_1 |

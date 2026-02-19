@@ -24,12 +24,14 @@
 
 // Examples - List
 #include "gpio_leds.h"
+#include "timer_leds.h"
 #include "uart_hello.h"
 
 int main(void) {
 
+    example_timer_leds();
     //example_gpio_leds();
-    example_uart_hello();
+    //example_uart_hello();
 
     while(1) {
     }
