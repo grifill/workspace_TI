@@ -41,7 +41,7 @@ int example_timer_leds(void) {
     }
 
     SysTickEnable();
-    SysTickPeriodSet(80000);
+    SysTickPeriodSet(16000000 - 1);
 
 
     // Enable the GPIO pin for the LED (PG3),
@@ -49,7 +49,7 @@ int example_timer_leds(void) {
     GPIOPinTypeGPIOOutput(GPIO_PORTG_BASE, GPIO_PIN_3);
 
     while(1) {
-        if(SysTickValueGet() > 0x80000) {
+        if(SysTickValueGet() > 15000000) {
             GPIOPinToggle(GPIO_PORTG_BASE, GPIO_PIN_3);
         }
     }
