@@ -37,6 +37,9 @@
 #include "driverlib/timer.h"
 #include "driverlib/systick.h"
 
+// User-lib
+#include "func_gpio.h"
+
 // Main example function
 int example_timer_leds(void);
 

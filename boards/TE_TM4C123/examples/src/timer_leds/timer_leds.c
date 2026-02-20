@@ -50,8 +50,7 @@ int example_timer_leds(void) {
 
     while(1) {
         if(SysTickValueGet() > 0x80000) {
-            GPIOPinWrite(GPIO_PORTG_BASE, GPIO_PIN_3, GPIO_PIN_3);
-            SysTickPeriodSet(0);
+            GPIOPinToggle(GPIO_PORTG_BASE, GPIO_PIN_3);
         }
     }
 
