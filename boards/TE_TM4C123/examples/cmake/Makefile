@@ -1,1 +1,0 @@
-# Hello, and welcome to makefile basics
